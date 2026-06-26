@@ -279,7 +279,7 @@
 .incoming-call-screen {
   height: 100dvh;
   width: 100vw;
-  background-image: url(https://cdn.askthalaanything.com/assets/images/video-call-Bg.jpg);
+  background-image: url(https://cdn.makear.ai/assets/images/video-call-Bg.jpg);
   position: absolute;
   z-index: 2;
   background-size: cover;
@@ -808,7 +808,7 @@
 .try-again-screen {
   height: 100dvh;
   width: 100vw;
-  background-image: url(https://cdn.askthalaanything.com/assets/images/video-call-Bg.jpg);
+  background-image: url(https://cdn.makear.ai/assets/images/video-call-Bg.jpg);
   background-color: #d91c24;
   position: absolute;
   z-index: 4;
@@ -947,7 +947,7 @@
   left: 0;
   height: 100dvh;
   width: 100vw;
-  background-image: url(https://cdn.askthalaanything.com/assets/images/bg-img.png);
+  background-image: url(https://cdn.makear.ai/assets/images/bg-img.png);
   position: absolute;
   z-index: 6;
   display: none;
@@ -1111,7 +1111,7 @@
   left: 0;
   height: 100dvh;
   width: 100vw;
-  background-image: url(https://cdn.askthalaanything.com/assets/images/bg-img.png);
+  background-image: url(https://cdn.makear.ai/assets/images/bg-img.png);
   position: absolute;
   z-index: 1;
   background-size: cover;
