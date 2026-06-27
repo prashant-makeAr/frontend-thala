@@ -817,8 +817,14 @@ function Script() {
   }
   function triggerEnglishSelectionIfNeeded() {
     if (!isMobileScreen()) return;
+
+    // Don't even start the timer if currently in landscape
+    if (window.innerWidth > window.innerHeight) return;
     if (!selectedLanguage && englishButton) {
+      clearTimeout(autoSelectTimeout);
       autoSelectTimeout = setTimeout(function () {
+        // Last second check before clicking: abort if landscape
+        if (window.innerWidth > window.innerHeight) return;
         englishButton.click();
       }, 5000);
     }
@@ -1298,6 +1304,61 @@ function Script() {
       triggerEnglishSelectionIfNeeded();
     }
   });
+  var globalRotateOverlay = document.getElementById("global-rotate-overlay");
+  var playingVideos = [];
+  function checkGlobalOrientation() {
+    if (!isMobileScreen()) return; // Only for mobile
+
+    // Check if landscape by comparing width and height
+    var isLandscape = window.innerWidth > window.innerHeight;
+
+    // Check if selfie screen is open
+    var selfieOverlay = document.getElementById("selfie-screen-overlay");
+    var isSelfieOpen = selfieOverlay && selfieOverlay.style.display === "block";
+    if (isLandscape && !isSelfieOpen) {
+      // Show overlay
+      if (globalRotateOverlay) {
+        globalRotateOverlay.style.display = "flex";
+      }
+      // Stop the auto-select timer
+      clearTimeout(autoSelectTimeout);
+
+      // Track playing videos and mute/pause them
+      allVideos.forEach(function (vid) {
+        if (!vid.paused && vid.readyState >= 2) {
+          if (!playingVideos.includes(vid)) {
+            playingVideos.push(vid);
+          }
+          vid.muted = true;
+          vid.pause();
+        }
+      });
+    } else {
+      // Hide overlay
+      if (globalRotateOverlay) {
+        globalRotateOverlay.style.display = "none";
+      }
+
+      // We do NOT resume the auto-select timer if the user rotates back to portrait.
+      // By rotating, they've shown active engagement, so we wait for them to manually choose a language.
+
+      // Resume tracked videos
+      if (playingVideos.length > 0) {
+        playingVideos.forEach(function (vid) {
+          vid.muted = false;
+          vid.play()["catch"](function (e) {
+            return console.error("Could not auto-resume video:", e);
+          });
+        });
+        playingVideos = [];
+      }
+    }
+  }
+  window.addEventListener("resize", checkGlobalOrientation);
+  window.addEventListener("orientationchange", checkGlobalOrientation);
+
+  // Call once to initialize
+  setTimeout(checkGlobalOrientation, 100);
 }
 
 /***/ }),
