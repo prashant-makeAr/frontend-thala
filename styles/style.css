@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+/* .otherLang {
+  pointer-events: none;
+  user-select: none;
+} */
+
 .container {
   height: 100dvh;
   width: 100vw;
