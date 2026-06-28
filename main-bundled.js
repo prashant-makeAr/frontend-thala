@@ -1155,7 +1155,7 @@ function Script() {
           shareData = {
             title: document.title,
             text: "I had my moment with Thala 💛 Now, it’s your turn! 3Roses made it possible for me, and you could be next. Here’s the link – don’t miss it:",
-            url: "https://askthalaanything.com/",
+            url: "https://askthalaanything.com",
             files: [file]
           };
           if (!(navigator.canShare && navigator.canShare({
