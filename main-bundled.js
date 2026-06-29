@@ -338,7 +338,7 @@ var avatarQuestionScreenContent = [{
   english: "Share the Thala magic",
   telugu: "తలా మాయను పంచుకోండి",
   //done
-  tamil: "தலாவின் மாயத்தை பகிருங்கள்",
+  tamil: "தல மேஜிக்கை பகிருங்கள்",
   //done
   kannada: "ತಲಾ ಮಾಯೆಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ" //done
 }, {
@@ -697,8 +697,8 @@ var questionContent = [[{
 }]];
 var selfieScreenContent = [{
   english: "TAKE A SELFIE WITH THALA",
-  tamil: "தலாவுடன் செல்ஃபி எடுங்கள்",
-  telugu: "తలాతో సెల్ఫీ తీయండి",
+  tamil: "தல-யுடன் செல்ஃபி எடுங்கள்",
+  telugu: "ధోనీతో సెల్ఫీ తీసుకోండి",
   kannada: "ತಲಾ ಜೊತೆ ಸೆಲ್ಫಿ ತೆಗೆಯಿರಿ"
 }, {
   english: "Rotate your device to click selfie with Thala",
