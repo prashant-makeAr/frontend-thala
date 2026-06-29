@@ -1,145 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-N9NNMJRH");
+    </script>
+    <!-- End Google Tag Manager -->
 
-<head>
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        'gtm.start': new Date().getTime(),
-        event: 'gtm.js'
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-N9NNMJRH');
-  </script>
-  <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z2ZMXCY69X"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2ZMXCY69X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+      gtag("config", "G-Z2ZMXCY69X");
+    </script>
 
-    gtag('config', 'G-Z2ZMXCY69X');
-  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Thala Anything</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.makear.ai/assets/images/share-img_1.png"
+    />
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ask Thala Anything</title>
-  <link rel="stylesheet" href="./styles/style.css" />
-  <link rel="icon" type="image/png" href="https://cdn.makear.ai/assets/images/share-img_1.png">
+    <link
+      rel="preload"
+      href="https://cdn.makear.ai/assets/images/bg-img.png"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.makear.ai/assets/images/thala.png"
+      as="image"
+    />
+  </head>
 
-  <!--! Prefetching and Preloading resources -->
-  <link rel="preload" href="https://cdn.makear.ai/assets/images/bg-img.png" as="image">
-  <link rel="preload" href="https://cdn.makear.ai/assets/images/thala.png" as="image">
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N9NNMJRH"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-  <!-- <link rel="preload" href="/assets/videos/english-intro.mp4" as="fetch" type="video/mp4">
-  <link rel="preload" href="/assets/videos/idle-video.mp4" as="fetch" type="video/mp4">
-  <link rel="preload" href="/assets/videos/english-outro.mp4" as="fetch" type="video/mp4"> -->
+    <div class="background-image-pc">
+      <img
+        class="logo-background-image"
+        src="https://cdn.makear.ai/assets/images/askthalaanything-logo.png"
+      />
 
-  <!-- Meta Pixel Code -->
-  <script>
-    ! function(f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function() {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1232476274924119');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1232476274924119&ev=PageView&noscript=1" /></noscript>
-  <!-- End Meta Pixel Code -->
-
-
-</head>
-
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9NNMJRH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <div class="background-image-pc">
-    <img class="logo-background-image" src="https://cdn.makear.ai/assets/images/askthalaanything-logo.png">
-
-    <div class="left-side-container">
-      <!-- <img class="non-mobile-dhoni-img" src="https://cdn.makear.ai/assets/images/non-mobile-dhoni-img.png" alt="Thala Hero Image" /> -->
-    </div>
-
-
-    <div class="experience-link">
-      <h2>
-        This experience is only available on mobile.<br>
-        Scan the QR code using your phone’s camera.
-      </h2>
-      <img class="qr-code-img" src="https://cdn.makear.ai/assets/images/qr-code.svg" alt="qr-code-img">
-      <h2>
-        Or visit<br>
-        https://askthalaanything.com
-      </h2>
-    </div>
-
-
-    <div class="center-side-container">
-      <div class="non-mobile-dhoni-video-container">
-        <video class="non-mobile-dhoni-video" muted autoplay playsinline loop preload="auto">
-          <source src='https://cdn.makear.ai/assets/videos/dhoni_desktop_video.mp4' type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-
-  </div>
-  <div class="background-image-tab">
-    <img class="logo-background-image" src="https://cdn.makear.ai/assets/images/askthalaanything-logo.png">
-    <div class="background-image-tab-container">
-      <div class="left-side-container-tab">
-        <!-- <img class="non-mobile-dhoni-img-tab" src="https://cdn.makear.ai/assets/images/non-mobile-dhoni-img.png" alt="Thala Hero Image" /> -->
-        <img class="qr-code-img-tab" src="https://cdn.makear.ai/assets/images/qr-code.svg" alt="qr-code-img">
+      <div class="left-side-container">
+        <!-- <img class="non-mobile-dhoni-img" src="https://cdn.makear.ai/assets/images/non-mobile-dhoni-img.png" alt="Thala Hero Image" /> -->
       </div>
 
-
-      <div class="right-side-container">
+      <div class="experience-link">
         <h2>
-          This experience is only available on mobile.<br>
+          This experience is only available on mobile in portrait mode.<br />
           Scan the QR code using your phone’s camera.
         </h2>
-        <div class="non-mobile-dhoni-video-container">
-          <video class="non-mobile-dhoni-video" muted autoplay playsinline loop preload="auto">
-            <source src='https://cdn.makear.ai/assets/videos/dhoni_desktop_video.mp4' type="video/mp4" />
+        <img
+          class="qr-code-img"
+          src="https://cdn.makear.ai/assets/images/qr-code.svg"
+          alt="qr-code-img"
+        />
+        <h2>
+          <br />
+          <br />
+          Or visit<br />
+          <br />
+          https://askthalaanything.com
+        </h2>
+      </div>
+
+      <div class="center-side-container">
+        <div style="display: none" class="non-mobile-dhoni-video-container">
+          <video
+            class="non-mobile-dhoni-video"
+            muted
+            autoplay
+            playsinline
+            loop
+            preload="auto"
+          >
+            <source
+              src="https://cdn.makear.ai/assets/videos/dhoni_desktop_video.mp4"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </div>
       </div>
     </div>
-    <h2 class="End-text-tab">
-      Or visit<br>
-      https://askthalaanything.com
-    </h2>
-  </div>
+    <div class="background-image-tab">
+      <img
+        class="logo-background-image"
+        src="https://cdn.makear.ai/assets/images/askthalaanything-logo.png"
+      />
+      <div class="background-image-tab-container">
+        <div class="left-side-container-tab">
+          <!-- <img class="non-mobile-dhoni-img-tab" src="https://cdn.makear.ai/assets/images/non-mobile-dhoni-img.png" alt="Thala Hero Image" /> -->
+          <img
+            class="qr-code-img-tab"
+            src="https://cdn.makear.ai/assets/images/qr-code.svg"
+            alt="qr-code-img"
+          />
+        </div>
+
+        <div class="right-side-container">
+          <h2>
+            This experience is only available on mobile in portrait mode.
+            <br />
+            Scan the QR code using your phone’s camera.
+          </h2>
+          <div style="display: none" class="non-mobile-dhoni-video-container">
+            <video
+              class="non-mobile-dhoni-video"
+              muted
+              autoplay
+              playsinline
+              loop
+              preload="auto"
+            >
+              <source
+                src="https://cdn.makear.ai/assets/videos/dhoni_desktop_video.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      <h2 class="End-text-tab">
+        <br />
+        <br />
+
+        Or visit<br />
+        <br />
+        https://askthalaanything.com
+      </h2>
+    </div>
+  </body>
+</html>
+
 
 <div class="container experience-page">
 

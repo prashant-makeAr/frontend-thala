@@ -1544,17 +1544,17 @@
 
   .End-text-tab {
     text-align: center;
-    position: absolute;
-    left: 0;
+    /* position: absolute; */
+    /* left: 0;
     right: 0;
-    bottom: 4dvh;
-    margin: auto;
+    bottom: 4dvh; */
+    /* margin: auto; */
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 2.2rem;
+    font-size: 3dvh;
   }
 
   .logo-background-image {
@@ -1585,7 +1585,7 @@
   .right-side-container h2 {
     color: white;
 
-    font-size: 2.2rem;
+    font-size: 3.2dvh;
   }
 
   .non-mobile-dhoni-video {
@@ -1593,13 +1593,15 @@
     width: 103%;
   }
   .qr-code-img-tab {
-    width: 45vw;
-    max-width: 45vw;
+    width: 28dvh;
+    max-width: 28dvh;
   }
 
   .logo-background-image {
-    width: 30dvw;
-    max-width: 50dvw;
+    width: 22dvh;
+    max-width: 30rem;
+    top: 0;
+    left: 0;
   }
 }
 
