@@ -105,6 +105,7 @@
   z-index: 1;
   margin: auto;
   border-radius: 20px;
+  pointer-events: none;
 }
 
 .language-icon-img {
@@ -148,6 +149,7 @@
   font-size: 16px;
   color: #8c8c8c;
   width: 6.5rem;
+  pointer-events: auto;
 }
 
 .language-selection-btn.btn1 {
@@ -1056,6 +1058,7 @@
 .icon_share {
   font-size: 1rem;
   width: 15px;
+  pointer-events: none;
 }
 
 .dhoni-thankyou-continue-screen {
@@ -1109,6 +1112,7 @@
   left: 0;
   right: 0;
   margin: auto;
+  pointer-events: none;
 }
 
 .attempt-page-screen {
@@ -1372,6 +1376,7 @@
 
 #thankYouContinueButton {
   font-size: 1.2rem;
+  pointer-events: auto;
 }
 
 .qr-code-img {
