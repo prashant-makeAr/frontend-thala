@@ -191,7 +191,8 @@ function getContentQuestions(selectedLanguage) {
         // currentGroupIndex = getNextUnseenIndex();
 
         buffer2.style.opacity = 0;
-        fbq("track", "InitiateCheckout");
+        // fbq("track", "InitiateCheckout");
+
         if (!seenGroups.includes(currentGroupIndex)) {
           seenGroups.push(currentGroupIndex);
           localStorage.setItem(SEEN_KEY, JSON.stringify(seenGroups));
@@ -226,7 +227,7 @@ function getContentQuestions(selectedLanguage) {
   // }
   function handleNextButtonClick() {
     // Mark current group as seen
-    fbq("track", "ViewContent");
+    // fbq("track", "ViewContent");
     if (!seenGroups.includes(currentGroupIndex)) {
       seenGroups.push(currentGroupIndex);
       localStorage.setItem(SEEN_KEY, JSON.stringify(seenGroups));
@@ -836,7 +837,8 @@ function Script() {
           case 0:
             clearTimeout(autoSelectTimeout);
             selectedLanguage = button.id;
-            fbq("track", "AddToCart");
+            // fbq("track", "AddToCart");
+
             try {
               // Since we are deploying on a static host (Cloudflare Pages),
               // we no longer have a backend to handle POST requests or manage sessions.
@@ -845,7 +847,7 @@ function Script() {
             } catch (error) {
               console.error("Error setting language:", error);
             }
-          case 4:
+          case 3:
           case "end":
             return _context.stop();
         }
@@ -953,7 +955,8 @@ function Script() {
   // }
 
   function handlePickCall() {
-    fbq("track", "CompleteRegistration");
+    // fbq("track", "CompleteRegistration");
+
     callAccepted = true;
     clearInterval(callAcceptedTimer);
     (0,_utils__WEBPACK_IMPORTED_MODULE_0__.hideElement)(incomingCallScreen, 500);
@@ -1070,7 +1073,7 @@ function Script() {
   }
   callEnd.addEventListener("click", function () {
     // console.log("Next Questions button clicked!");
-    fbq("track", "Lead");
+    // fbq("track", "Lead");
     // fetch("/complete");
     dhoniVideo.pause();
     dhoniVideo.currentTime = 0;
@@ -1131,23 +1134,23 @@ function Script() {
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
-          fbq("track", "SubmitApplication");
+          // fbq("track", "SubmitApplication");
           faviconLink = document.querySelector("link[rel='icon']");
           if (faviconLink) {
-            _context2.next = 4;
+            _context2.next = 3;
             break;
           }
           return _context2.abrupt("return", alert("Favicon not found"));
-        case 4:
+        case 3:
           faviconUrl = new URL(faviconLink.href, window.location.href).href;
-          _context2.prev = 5;
-          _context2.next = 8;
+          _context2.prev = 4;
+          _context2.next = 7;
           return fetch(faviconUrl);
-        case 8:
+        case 7:
           response = _context2.sent;
-          _context2.next = 11;
+          _context2.next = 10;
           return response.blob();
-        case 11:
+        case 10:
           blob = _context2.sent;
           file = new File([blob], "favicon.png", {
             type: "image/png"
@@ -1161,40 +1164,40 @@ function Script() {
           if (!(navigator.canShare && navigator.canShare({
             files: [file]
           }) && navigator.share)) {
-            _context2.next = 19;
+            _context2.next = 18;
             break;
           }
-          _context2.next = 17;
+          _context2.next = 16;
           return navigator.share(shareData);
-        case 17:
-          _context2.next = 20;
+        case 16:
+          _context2.next = 19;
           break;
-        case 19:
+        case 18:
           throw new Error("Web Share Level 2 not supported or cannot share files");
-        case 20:
-          _context2.next = 35;
+        case 19:
+          _context2.next = 34;
           break;
-        case 22:
-          _context2.prev = 22;
-          _context2.t0 = _context2["catch"](5);
+        case 21:
+          _context2.prev = 21;
+          _context2.t0 = _context2["catch"](4);
           console.error("Error sharing:", _context2.t0);
           alert("Sharing failed. Copying link to clipboard instead.");
-          _context2.prev = 26;
-          _context2.next = 29;
+          _context2.prev = 25;
+          _context2.next = 28;
           return navigator.clipboard.writeText(window.location.href);
-        case 29:
+        case 28:
           alert("Link copied to clipboard!");
-          _context2.next = 35;
+          _context2.next = 34;
           break;
-        case 32:
-          _context2.prev = 32;
-          _context2.t1 = _context2["catch"](26);
+        case 31:
+          _context2.prev = 31;
+          _context2.t1 = _context2["catch"](25);
           console.error("Clipboard write failed:", _context2.t1);
-        case 35:
+        case 34:
         case "end":
           return _context2.stop();
       }
-    }, _callee2, null, [[5, 22], [26, 32]]);
+    }, _callee2, null, [[4, 21], [25, 31]]);
   })));
   function restartCamera() {
     return _restartCamera.apply(this, arguments);
@@ -2206,7 +2209,7 @@ function isAndroidOrWindows() {
 function endCall() {
   // dhoniVideo.pause();
   // dhoniVideo.currentTime = 0;
-  fbq("track", "Lead");
+  // fbq("track", "Lead");
   // fetch("/complete"); // Disabled: no backend on Cloudflare Pages (was causing 405)
   dhoniVideo.muted = true;
   idleVideo.pause();
