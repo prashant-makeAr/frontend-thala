@@ -699,7 +699,7 @@ var selfieScreenContent = [{
   english: "TAKE A SELFIE WITH THALA",
   tamil: "தல-யுடன் செல்ஃபி எடுங்கள்",
   telugu: "ధోనీతో సెల్ఫీ తీసుకోండి",
-  kannada: "ತಲಾ ಜೊತೆ ಸೆಲ್ಫಿ ತೆಗೆಯಿರಿ"
+  kannada: "ಧೋನಿ ಜೊತೆ ಸೆಲ್ಫಿ ತೆಗೆಯಿರಿ"
 }, {
   english: "Rotate your device to click selfie with Thala",
   tamil: "தலாவுடன் செல்ஃபி எடுக்க உங்கள் சாதனத்தைச் சுழற்றுங்கள்",
